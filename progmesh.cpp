@@ -12,6 +12,7 @@
 #include <stdlib.h>
 #include <assert.h>
 #include <assert.h>
+#include <iostream>
 
 #include "progmesh.h"
 
