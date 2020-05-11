@@ -17,8 +17,8 @@
 
 #include "progmesh.h"
 
-template<class T> int   Contains(const std::vector<T> & c, const T & t){ return std::count(begin(c), end(c), t); }
-template<class T> int   IndexOf(const std::vector<T> & c, const T & v) { return std::find(begin(c), end(c), v) - begin(c); } // Note: Not presently called
+template<class T> int   Contains(const std::vector<T> & c, const T & t){ return (int)std::count(begin(c), end(c), t); }
+template<class T> int   IndexOf(const std::vector<T> & c, const T & v) { return (int)( std::find(begin(c), end(c), v) - begin(c) ); } // Note: Not presently called
 template<class T> T &   Add(std::vector<T> & c, T t)                   { c.push_back(t); return c.back(); }
 template<class T> T     Pop(std::vector<T> & c)                        { auto val = std::move(c.back()); c.pop_back(); return val; }
 template<class T> void  AddUnique(std::vector<T> & c, T t)             { if (!Contains(c, t)) c.push_back(t); }
@@ -306,7 +306,7 @@ void ProgressiveMesh(std::vector<float3> &vert, std::vector<tridata> &tri,
 		// get the next vertex to collapse
 		Vertex *mn = MinimumCostEdge();
 		// keep track of this vertex, i.e. the collapse ordering
-		permutation[mn->id] = vertices.size() - 1;
+		permutation[mn->id] = (int)vertices.size() - 1;
 		// keep track of vertex to which we collapse to
 		map[vertices.size() - 1] = (mn->collapse) ? mn->collapse->id : -1;
 		// Collapse this edge
