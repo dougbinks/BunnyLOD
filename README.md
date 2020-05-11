@@ -1,4 +1,5 @@
 Original code: https://github.com/melax/sandbox/tree/master/bunnylod
+More information & article link: http://www.melax.com/polychop
 
 	Polygon Reduction Demo
 	By Stan Melax (c) 1998
@@ -6,13 +7,18 @@ Original code: https://github.com/melax/sandbox/tree/master/bunnylod
 
 Mouse dragging spins the rabbit.
 
-
 August 2014: code style upgraded to be more consistent with graphics/gamdev conventions 
 
 MIT Licensed as per https://github.com/melax/sandbox/blob/master/LICENSE
 
 # BunnyLOD Cross Platform Port
 May 2020: Cross platform port using GLFW and CMake by Doug Binks
+
+I have made sufficient and minimal changes to Stan Melax's code to get it running with GLFW on Windows, OSX and Linux.
+
+The main interesting code is in [progmesh.h](https://github.com/dougbinks/BunnyLOD/blob/master/progmesh.h) and [progmesh.cpp](https://github.com/dougbinks/BunnyLOD/blob/master/progmesh.cpp).
+
+The code requires a C++14 compatible compiler. Visual Studio on Windows, Clang on OSX and GCC on Linux tested.
 
 ![BunnyLOD screenshot](https://github.com/dougbinks/images/blob/master/BunnyLOD.jpg?raw=true)
 
