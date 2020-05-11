@@ -175,7 +175,7 @@ public:
 		va_list args;
 		va_start(args, s);
 		char buffer[1024];
-		vsnprintf_s<1024>(buffer, sizeof(buffer), s, args);
+		vsnprintf(buffer, sizeof(buffer), s, args);
 		va_end(args);
 		int2x2 viewport;  // current viewport settings  [[x y][w h]] 
 		glGetIntegerv(GL_VIEWPORT, (GLint*)&viewport);
