@@ -11,8 +11,6 @@
 #include <math.h>
 #include <stdlib.h>
 #include <assert.h>
-#define NOMINMAX
-#include <windows.h>
 #include <assert.h>
 
 #include "progmesh.h"
