@@ -17,6 +17,12 @@ add_subdirectory( glfw )
 if( WIN32 )
     SET( CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SUBSYSTEM:WINDOWS /ENTRY:mainCRTStartup" )
 endif()
+if( UNIX )
+    SET( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11" )
+endif()
+if( APPLE )
+    SET( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++" )
+endif()
 
 set( BunnyLOD-SRC
      main.cpp
@@ -29,6 +35,7 @@ set( BunnyLOD-SRC
      glutil.h
      geometric.h
      )
+
      
 add_executable( BunnyLOD ${BunnyLOD-SRC} )
 target_link_libraries( BunnyLOD ${OPENGL_LIBRARIES} glfw ${GLFW_LIBRARIES} )
