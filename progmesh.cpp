@@ -13,6 +13,7 @@
 #include <assert.h>
 #include <assert.h>
 #include <iostream>
+#include <algorithm>
 
 #include "progmesh.h"
 
