@@ -24,7 +24,7 @@
 #include <cstring>
 #include <cstdarg>   // For va_list, va_start, ...
 #include <cstdio>    // For vsnprintf
-
+#include <GLFW/glfw3.h>
 #include "linalg.h"
 using namespace linalg::aliases;
 

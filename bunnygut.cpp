@@ -10,14 +10,11 @@
  *  use) to show the model at various levels of detail.
  */
 
-#define NOMINMAX
-#include <windows.h>
 #include <stdio.h>  
 #include <math.h>
 #include <stdlib.h>
 #include <assert.h>
 #include <string.h>
-#include <GL/gl.h>
 #pragma warning(disable : 4244)
 
 #include "progmesh.h"
