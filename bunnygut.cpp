@@ -268,9 +268,9 @@ char *RenderModel( float DeltaT ) {
 	glPopMatrix();
 
 	static char buf[256];
-	sprintf_s(buf,"Polys: %d  Vertices: %d ",renderpolycount,render_num);
+	snprintf(buf,sizeof(buf),"Polys: %d  Vertices: %d ",renderpolycount,render_num);
 	if(morph<1.0) {
-		sprintf_s(buf+strlen(buf),256-strlen(buf),"<-> %d  morph: %4.2f ",
+		snprintf(buf+strlen(buf),256-strlen(buf),"<-> %d  morph: %4.2f ",
 		        (int)(lodbase *render_num),morph); 
 	}
 	return buf;
