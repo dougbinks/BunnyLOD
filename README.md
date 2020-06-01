@@ -50,3 +50,12 @@ From a command prompt in the `BunnyLOD` directory:
 1. `cd build`
 1. `cmake ..`
 1. Either run `make all` or for Visual Studio open `BunnyLOD.sln`
+
+## Also see
+
+[BGFX](https://github.com/bkaradzic/bgfx) example 42-bunnlod by [cloudwu](https://github.com/cloudwu):
+https://bkaradzic.github.io/bgfx/examples.html#bunnylod
+![BGFX example 42-bunnlod screenshot](https://github.com/bkaradzic/bgfx/raw/master/examples/42-bunnylod/screenshot.png)
+
+This port to render with the [BGFX GFX API](https://github.com/bkaradzic/bgfx) also adds a [Dear ImGui UI](https://github.com/ocornut/imgui) and the code is converted to C.
+
